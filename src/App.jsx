@@ -1,15 +1,14 @@
 import './App.css'
+import {Link} from 'react-router-dom'
 
 function App() {
 
   return (
     <>
       <main className='h-full w-full'>
-        
-
         <div className='flex w-full h-full flex-col'>
           <nav className='navbar h-[100px] w-full flex justify-center items-center'>
-            <h1 className='text-[30px] font-medium'>BuildMyRes.</h1>
+            <h1 className='text-[28px] font-medium'>BuildMyRes.</h1>
           </nav>
           
           <div className="content flex flex-col sm:flex-row w-full h-full">
@@ -19,7 +18,7 @@ function App() {
               </div>
 
               <div className="second flex flex-col items-start justify-center h-full w-full sm:gap-[30px] gap-[24px]">
-                <button className='text-[40px] px-[50px] font-bold'>BUILD<img src="arrow.png" className=' h-[50px]' /></button>
+                <Link to="/create"><button className='text-[40px] px-[50px] font-bold cursor-pointer'>BUILD<img src="arrow.png" className=' h-[50px]' /></button></Link>
                   <h1 className='sm:text-[30px] text-[28px] font-bold px-[50px]'>Fast and Clean Resume Creation</h1>
                   <p className='text-[22px] font-medium px-[50px] w-[500px]'>Create a resume that matches your skill and experience, in no time.</p>
                   </div>
