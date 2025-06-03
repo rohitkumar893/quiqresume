@@ -15,7 +15,7 @@ function App() {
           <div className="content flex flex-col sm:flex-row w-full h-full">
               <div className="first h-full w-full flex items-center justify-center relative">
                 <img src="bgdesign.png" className='sm:w-[600px] w-[350px]' />
-                <img src="resdemo.jpg" className='z-[3] h-[350px] absolute rounded-md' />
+                <img src="resdemo.jpg" className='z-[3] sm:h-[350px] h-[232px] absolute rounded-md' />
               </div>
 
               <div className="second flex flex-col items-start justify-center h-full w-full sm:gap-[30px] gap-[24px]">
