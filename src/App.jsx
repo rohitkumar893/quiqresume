@@ -26,7 +26,8 @@ function App() {
         </div>
 
         <div className="about h-[100%]">
-          <h1></h1>
+          <h1>ABOUT</h1>
+          <p>A straightforward web app that helps users create clean, professional resumes quickly. Users can input their personal details, work experience, education, and skills, then generate a downloadable resume in PDF format. No complicated features-just a fast, easy way to get your resume ready for job hunting.</p>
         </div>
       </main>
     </>
