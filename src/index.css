@@ -5,8 +5,8 @@ html, body, #root{
   width: 100%;
   margin: 0;
   padding: 0;
-  color: white;
-  background-image: url("bg.png");
+  color: rgb(0, 0, 0);
+  background-image: url("bgimg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;

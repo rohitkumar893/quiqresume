@@ -13,14 +13,16 @@ function App() {
           
           <div className="content flex flex-col sm:flex-row w-full h-full">
               <div className="first h-full w-full flex items-center justify-center relative">
-                <img src="bgdesign.png" className='sm:w-[600px] w-[350px]' />
+                <img src="bgdesign.png" className='sm:w-[500px] w-[300px]' />
                 <img src="resdemo.jpg" className='z-[3] sm:h-[350px] h-[232px] absolute rounded-md' />
               </div>
 
-              <div className="second flex flex-col items-start justify-center h-full w-full sm:gap-[30px] gap-[24px]">
-                <Link to="/create"><button className='text-[40px] px-[50px] font-bold cursor-pointer'>BUILD<img src="arrow.png" className=' h-[50px]' /></button></Link>
-                  <h1 className='sm:text-[30px] text-[28px] font-bold px-[50px]'>Fast and Clean Resume Creation</h1>
-                  <p className='text-[22px] font-medium px-[50px] w-[500px]'>Create a resume that matches your skill and experience, in no time.</p>
+              <div className="second flex flex-col items-center justify-center h-full w-full sm:gap-[30px] gap-[24px]">
+                <Link to="/create"><button className='text-[40px] text-white px-[50px] font-bold cursor-pointer bg-purple-600'>BUILD</button></Link>
+                  <div className='flex flex-col gap-[15px]'>
+                    <h1 className='sm:text-[30px] text-[28px] font-bold px-[50px]'>Fast and Clean Resume Creation</h1>
+                    <p className='text-[22px] font-medium px-[50px] w-[500px]'>Create a resume that matches your skill and experience, in no time.</p>
+                  </div>
                   </div>
               </div>
         </div>
