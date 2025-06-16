@@ -8,7 +8,7 @@ function App() {
       <main className='h-full w-full'>
         <div className='flex w-full h-full flex-col'>
           <nav className='navbar h-[100px] w-full flex justify-center items-center'>
-            <h1 className='text-[28px] font-medium'>BuildMyRes.</h1>
+            <h1 className='text-[28px] font-medium text-white'>BuildMyRes.</h1>
           </nav>
           
           <div className="content flex flex-col sm:flex-row w-full h-full">

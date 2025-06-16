@@ -2,7 +2,10 @@ import React from 'react'
 
 const Create = () => {
   return (
-    <div className='flex justify-center items-center h-full w-full'>
+    <div className='flex flex-col justify-center items-center h-full w-full'>
+      <nav className='navbar h-[100px] w-full flex justify-center items-center'>
+            <h1 className='text-[28px] font-medium'>BuildMyRes.</h1>
+          </nav>
       <div className='h-[600px] w-[640px] flex-col gap-[30px] flex items-center justify-center border'>
         <h1 className='text-[30px]'>FILL YOUR DETAILS</h1>
           <form className="flex flex-col gap-4">
