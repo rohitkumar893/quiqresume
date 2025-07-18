@@ -13,7 +13,7 @@ function App() {
           
           <div className="content flex flex-col sm:flex-row w-full h-full">
               <div className="first h-full w-full flex items-center justify-center relative">
-                <img src="bgdesign.png" className='sm:w-[500px] w-[300px]' />
+                <img src="bgdesign.png" className='sm:w-[480px] w-[300px]' />
                 <img src="resdemo.jpg" className='z-[3] sm:h-[350px] h-[232px] absolute rounded-md' />
               </div>
 
@@ -27,8 +27,8 @@ function App() {
               </div>
         </div>
 
-        <div className="about h-full w-full flex flex-col mt-[85px] justify-start items-center">
-          <h1 className='text-center text-[40px]'>ABOUT</h1>
+        <div className="about h-full w-full flex flex-col pt-[80px] mt-[85px] justify-start items-center">
+          <h1 className='text-center text-[38px]'><b>ABOUT</b></h1>
           <p className='text-center text-[20px] sm:text-[28px] w-[90%] sm:w-[85%]'>A straightforward web app that helps users create clean, professional resumes quickly. Users can input their personal details, work experience, education, and skills, then generate a downloadable resume in PDF format. No complicated features-just a fast, easy way to get your resume ready for job hunting.</p>
         </div>
       </main>
