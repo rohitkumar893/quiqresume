@@ -1,37 +1,28 @@
 import './App.css'
 import {Link} from 'react-router-dom'
+import Navbar from '../components/Navbar'
+import About from '../components/About'
 
 function App() {
 
   return (
-    <>
-      <main className='h-full w-full'>
+    <>   
         <div className='flex w-full h-full flex-col'>
-          <nav className='navbar h-[100px] w-full flex justify-center items-center'>
-            <h1 className='text-[28px] font-medium text-white'>BuildMyRes.</h1>
-          </nav>
-          
-          <div className="content flex flex-col sm:flex-row w-full h-full">
+          <Navbar />   
+
+          <div className="content flex flex-col md:flex-row w-full h-full">
               <div className="first h-full w-full flex items-center justify-center relative">
-                <img src="bgdesign.png" className='sm:w-[480px] w-[300px]' />
-                <img src="resdemo.jpg" className='z-[3] sm:h-[350px] h-[232px] absolute rounded-md' />
+                <img src="resdemo.png" className='heroimage object-contain z-[3] md:h-[460px] h-[252px] absolute rounded-md hover:scale-104 transition-transform' />
               </div>
 
-              <div className="second flex flex-col items-center justify-center h-full w-full sm:gap-[30px] gap-[24px]">
-                <Link to="/create"><button className='text-[40px] text-white px-[50px] font-bold cursor-pointer bg-purple-600'>BUILD</button></Link>
-                  <div className='flex flex-col gap-[15px]'>
-                    <h1 className='sm:text-[30px] text-[28px] font-bold px-[50px]'>Fast and Clean Resume Creation</h1>
-                    <p className='text-[22px] font-medium px-[50px] w-[500px]'>Create a resume that matches your skill and experience, in no time.</p>
+              <div className="second flex flex-col items-center md:items-start justify-center h-full w-full">
+                  <div className='flex flex-col items-center md:items-start gap-[50px]'>
+                    <p className='p-[38px] mt-[-120px] md:mt-0 md:p-0 text-[32px] md:text-[55px] font-semibold w-[500px] leading-[1.2]'>Create <span className='text-sky-600'>resume</span> that matches your skills and experience, in no time.</p>
+                    <Link to="/create" className='text-[30px] mt-[-20px] md:mt-0 text-center text-white px-4 font-bold cursor-pointer hover:scale-104 transition-transform bg-sky-600 w-[180px] h-[62px] flex items-center justify-center rounded-[10px]'>GENERATE</Link>
                   </div>
-                  </div>
-              </div>
+                </div>
+            </div>
         </div>
-
-        <div className="about h-full w-full flex flex-col pt-[80px] mt-[85px] justify-start items-center">
-          <h1 className='text-center text-[38px]'><b>ABOUT</b></h1>
-          <p className='text-center text-[20px] sm:text-[28px] w-[90%] sm:w-[85%]'>A straightforward web app that helps users create clean, professional resumes quickly. Users can input their personal details, work experience, education, and skills, then generate a downloadable resume in PDF format. No complicated features-just a fast, easy way to get your resume ready for job hunting.</p>
-        </div>
-      </main>
     </>
   )
 }
