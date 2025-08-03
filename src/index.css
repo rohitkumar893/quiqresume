@@ -5,10 +5,6 @@ html, body, #root{
   width: 100%;
   margin: 0;
   padding: 0;
-  background-image: url('bgimg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: gainsboro;
   color: darkslategray;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
