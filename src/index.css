@@ -5,7 +5,11 @@ html, body, #root{
   width: 100%;
   margin: 0;
   padding: 0;
-  color: darkslategray;
+  background-image: url('bgimg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: rgb(45, 67, 67);
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
 }
