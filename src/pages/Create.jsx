@@ -21,7 +21,7 @@ const Create = () => {
 
               <div className="flex items-center gap-2">
                 <label htmlFor="email" className="w-32">Email</label>
-                <input type="text" id="email" className="border w-48 px-[5px]" placeholder='Your e-mail' />
+                <input type="text" id="email" className="border w-48 px-[5px]" placeholder='E-mail' />
               </div>
 
               <div className="flex items-center gap-2">
