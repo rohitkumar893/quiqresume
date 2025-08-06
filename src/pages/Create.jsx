@@ -6,7 +6,7 @@ const Create = () => {
     <>
     <Navbar />
     <div className='flex flex-col mt-[-50px] justify-center items-center h-full w-full'>
-      <div className='h-[490px] sm:h-[520px] w-[390px] sm:w-[440px] flex-col gap-[30px] flex items-center justify-center rounded-[10px] shadow-xl bg-white'>
+      <div className='h-[490px] sm:h-[520px] w-[390px] sm:w-[430px] flex-col gap-[30px] flex items-center justify-center rounded-[10px] shadow-xl bg-white'>
           <h1 className='text-[24px] font-medium'>Fill your details</h1>
           <form className="flex flex-col gap-5">
               <div className="flex items-center gap-2">
