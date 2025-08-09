@@ -36,7 +36,7 @@ const Create = () => {
 
               <div className="flex items-center gap-2">
                 <label htmlFor="experience" className="w-32">Experience</label>
-                <input type="text" id="experience" className="border w-48 px-[5px]" placeholder='Role at companies, duration' />
+                <input type="text" id="experience" className="border w-48 px-[5px]" placeholder='Roles, duration' />
               </div>
 
               <div className="flex items-center gap-2">
@@ -44,7 +44,7 @@ const Create = () => {
                 <input type="text" id="address" className="border w-48 px-[5px]" placeholder='City, State' />
               </div>
 
-              <button className='bg-sky-500 h-[40px] text-white mt-[10px] font-medium cursor-pointer'>GENERATE</button>
+              <button className='bg-sky-500 h-[40px] text-white mt-[8px] font-medium cursor-pointer'>GENERATE</button>
             </form>
     </div>
     </div>
