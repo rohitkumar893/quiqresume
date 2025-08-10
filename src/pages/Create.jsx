@@ -1,56 +1,72 @@
-import React from 'react'
-import Navbar from '../../components/Navbar'
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Navbar from "../../components/Navbar";
 
 const Create = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    contact: "",
+    email: "",
+    education: "",
+    skills: "",
+    experience: "",
+    address: "",
+  });
+
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [id]: value,
+    }));
+  };
+
+  const handleGenerate = (e) => {
+    e.preventDefault();
+    navigate("/preview", { state: { formData } });
+  };
+
   return (
     <>
-    <Navbar />
-    <div className='flex flex-col mt-[-50px] justify-center items-center h-full w-full'>
-      <div className='h-[490px] sm:h-[520px] w-[390px] sm:w-[430px] flex-col gap-[30px] flex items-center justify-center rounded-[10px] shadow-xl bg-white'>
-          <h1 className='text-[24px] font-medium'>Fill your details</h1>
-          <form className="flex flex-col gap-5">
-              <div className="flex items-center gap-2">
-                <label htmlFor="name" className="w-32">Name</label>
-                <input type="text" id="name" className="border w-48 px-[5px]" placeholder='Full Name' />
+      <Navbar />
+      <div className="flex flex-col items-center gap-10 p-5">
+        <div className="h-auto w-[390px] sm:w-[430px] flex-col gap-[30px] flex items-center justify-center rounded-[10px] shadow-xl bg-white p-5">
+          <h1 className="text-[24px] font-medium">Fill your details</h1>
+          <form className="flex flex-col gap-5" onSubmit={handleGenerate}>
+            {[
+              { id: "name", label: "Name", placeholder: "Full Name" },
+              { id: "contact", label: "Contact", placeholder: "Contact Number" },
+              { id: "email", label: "Email", placeholder: "E-mail" },
+              { id: "education", label: "Education", placeholder: "Course, University, Year" },
+              { id: "skills", label: "Skills", placeholder: "Separate by commas" },
+              { id: "experience", label: "Experience", placeholder: "Roles, duration" },
+              { id: "address", label: "Address", placeholder: "City, State" },
+            ].map((field) => (
+              <div key={field.id} className="flex items-center gap-2">
+                <label htmlFor={field.id} className="w-32">{field.label}</label>
+                <input
+                  type="text"
+                  id={field.id}
+                  className="border w-48 px-[5px]"
+                  placeholder={field.placeholder}
+                  value={formData[field.id]}
+                  onChange={handleChange}
+                />
               </div>
-
-              <div className="flex items-center gap-2">
-                <label htmlFor="contact" className="w-32">Contact</label>
-                <input type="number" id="contact" className="border w-48 px-[5px]" placeholder='Contact Number' />
-              </div>
-
-              <div className="flex items-center gap-2">
-                <label htmlFor="email" className="w-32">Email</label>
-                <input type="text" id="email" className="border w-48 px-[5px]" placeholder='E-mail' />
-              </div>
-
-              <div className="flex items-center gap-2">
-                <label htmlFor="education" className="w-32">Education</label>
-                <input type="text" id="education" className="border w-48 px-[5px]" placeholder='Course, University, Year' />
-              </div>
-
-              <div className="flex items-center gap-2">
-                <label htmlFor="skills" className="w-32">Skills</label>
-                <input type="text" id="skills" className="border w-48 px-[5px]" placeholder='Separate by commas' />
-              </div>
-
-              <div className="flex items-center gap-2">
-                <label htmlFor="experience" className="w-32">Experience</label>
-                <input type="text" id="experience" className="border w-48 px-[5px]" placeholder='Roles, duration' />
-              </div>
-
-              <div className="flex items-center gap-2">
-                <label htmlFor="address" className="w-32">Address</label>
-                <input type="text" id="address" className="border w-48 px-[5px]" placeholder='City, State' />
-              </div>
-
-              <button className='bg-sky-500 h-[40px] text-white mt-[8px] font-medium cursor-pointer'>GENERATE</button>
-            </form>
-    </div>
-    </div>
+            ))}
+            <button
+              type="submit"
+              className="bg-sky-500 h-[40px] text-white mt-[8px] font-medium cursor-pointer"
+            >
+              GENERATE
+            </button>
+          </form>
+        </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-
-export default Create
+export default Create;
