@@ -7,10 +7,12 @@ const Create = () => {
     name: "",
     contact: "",
     email: "",
+    objective: "",
     education: "",
     skills: "",
     experience: "",
     address: "",
+    hobbies: "",      // Added hobbies field
   });
 
   const navigate = useNavigate();
@@ -39,10 +41,12 @@ const Create = () => {
               { id: "name", label: "Name", placeholder: "Full Name" },
               { id: "contact", label: "Contact", placeholder: "Contact Number" },
               { id: "email", label: "Email", placeholder: "E-mail" },
+              { id: "objective", label: "Objective", placeholder: "Career objective" },
               { id: "education", label: "Education", placeholder: "Course, University, Year" },
               { id: "skills", label: "Skills", placeholder: "Separate by commas" },
               { id: "experience", label: "Experience", placeholder: "Roles, duration" },
               { id: "address", label: "Address", placeholder: "City, State" },
+              { id: "hobbies", label: "Hobbies", placeholder: "Separate by commas" },
             ].map((field) => (
               <div key={field.id} className="flex items-center gap-2">
                 <label htmlFor={field.id} className="w-32">{field.label}</label>
