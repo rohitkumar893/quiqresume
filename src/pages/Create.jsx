@@ -42,7 +42,7 @@ const Create = () => {
               { id: "name", label: "Name", placeholder: "Full Name" },
               { id: "contact", label: "Contact", placeholder: "Contact Number" },
               { id: "email", label: "Email", placeholder: "E-mail" },
-              { id: "objective", label: "Objective", placeholder: "Objective under 15 words" },
+              { id: "objective", label: "Objective", placeholder: "Career Objective" },
               { id: "education", label: "Education", placeholder: "University, Year (Recent)" },
               { id: "skills", label: "Skills", placeholder: "Separate by commas" },
               { id: "experience", label: "Experience", placeholder: "Roles, duration (Recent)" },
