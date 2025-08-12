@@ -28,7 +28,7 @@ const ResumePreview = () => {
 
           {/* Objective */}
           {formData.objective && (
-            <section className="mb-6">
+            <section className="mb-8">
               <h2 className="text-xl font-semibold border-b pb-1 border-gray-300">
                 Objective
               </h2>
@@ -38,7 +38,7 @@ const ResumePreview = () => {
 
           {/* Education */}
           {formData.education && (
-            <section className="mb-10">
+            <section className="mb-8">
               <h2 className="text-xl font-semibold border-b pb-1 border-gray-300">
                 Education
               </h2>
@@ -48,7 +48,7 @@ const ResumePreview = () => {
 
           {/* Skills */}
           {formData.skills && (
-            <section className="mb-10">
+            <section className="mb-8">
               <h2 className="text-xl font-semibold border-b pb-1 border-gray-300">
                 Skills
               </h2>
@@ -58,7 +58,7 @@ const ResumePreview = () => {
 
           {/* Experience */}
           {formData.experience && (
-            <section className="mb-6">
+            <section className="mb-8">
               <h2 className="text-xl font-semibold border-b pb-1 border-gray-300">
                 Experience
               </h2>
@@ -66,23 +66,20 @@ const ResumePreview = () => {
             </section>
           )}
 
-          {/* Address at bottom */}
+          {/* Address */}
           {formData.address && (
-            <section className="mt-8 border-t border-gray-300 pt-4">
-              <h2 className="text-xl font-semibold border-b pb-1 border-gray-300 mb-2">
+            <section className="mb-8">
+              <h2 className="text-xl font-semibold border-b pb-1 border-gray-300">
                 Address
               </h2>
-              {formData.address.split(",").map((part, index) => (
-                <p key={index} className="text-gray-600">
-                  {part.trim()}
-                </p>
-              ))}
+              <p className="text-gray-600 mt-2">{formData.address}</p>
             </section>
           )}
 
-          {/* Hobbies at the end with top border */}
+
+          {/* Hobbies */}
           {formData.hobbies && (
-            <section className="mt-8 pt-4 border-t border-gray-300 mb-4">
+            <section className="mt-8 pt-4 border-gray-300 mb-4">
               <h2 className="text-xl font-semibold border-b pb-1 border-gray-300">
                 Hobbies
               </h2>

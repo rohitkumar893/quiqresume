@@ -34,9 +34,10 @@ const Create = () => {
     <>
       <Navbar />
       <div className="flex flex-col items-center gap-10 p-5">
-        <div className="h-auto w-[390px] sm:w-[430px] flex-col gap-[30px] flex items-center justify-center rounded-[10px] shadow-xl bg-white p-5">
-          <h1 className="text-[24px] font-medium">Fill your details</h1>
-          <form className="flex flex-col gap-5" onSubmit={handleGenerate}>
+        <div className="h-auto w-[390px] sm:w-[430px] flex-col mt-[8px] gap-[25px] flex items-center justify-center rounded-[10px] shadow-xl bg-white p-5">
+          <h1 className="text-[22px] font-medium">FILL YOUR DETAILS</h1>
+          <h1 className="text-[16px] font-medium mt-[-15px] text-gray-600">Add "N/A" to non relevent fields </h1>
+          <form className="flex flex-col gap-4" onSubmit={handleGenerate}>
             {[
               { id: "name", label: "Name", placeholder: "Full Name" },
               { id: "contact", label: "Contact", placeholder: "Contact Number" },
@@ -44,7 +45,7 @@ const Create = () => {
               { id: "objective", label: "Objective", placeholder: "Career objective" },
               { id: "education", label: "Education", placeholder: "Course, University, Year" },
               { id: "skills", label: "Skills", placeholder: "Separate by commas" },
-              { id: "experience", label: "Experience", placeholder: "Roles, duration" },
+              { id: "experience", label: "Experience", placeholder: "Roles, duration (Recent)" },
               { id: "address", label: "Address", placeholder: "City, State" },
               { id: "hobbies", label: "Hobbies", placeholder: "Separate by commas" },
             ].map((field) => (
@@ -57,6 +58,7 @@ const Create = () => {
                   placeholder={field.placeholder}
                   value={formData[field.id]}
                   onChange={handleChange}
+                  required
                 />
               </div>
             ))}
