@@ -16,8 +16,8 @@ const ResumePreview = () => {
     <>
       <Navbar />
       <div className="flex flex-col items-center justify-start p-6 bg-gray-100 min-h-screen">
-        <div className="bg-white shadow-xl rounded-lg p-8 w-full max-w-[700px]">
-          
+        <div className="bg-white shadow-xl rounded-lg p-8 w-full max-w-[600px] min-h-[800px]">
+
           {/* Header */}
           <div className="text-center border-b border-gray-300 pb-4 mb-6">
             <h1 className="text-3xl font-bold">{formData.name}</h1>
@@ -28,7 +28,7 @@ const ResumePreview = () => {
 
           {/* Education */}
           {formData.education && (
-            <section className="mb-6">
+            <section className="mb-10">
               <h2 className="text-xl font-semibold border-b pb-1 border-gray-300">
                 Education
               </h2>
@@ -38,7 +38,7 @@ const ResumePreview = () => {
 
           {/* Skills */}
           {formData.skills && (
-            <section className="mb-6">
+            <section className="mb-10">
               <h2 className="text-xl font-semibold border-b pb-1 border-gray-300">
                 Skills
               </h2>
@@ -48,7 +48,7 @@ const ResumePreview = () => {
 
           {/* Experience */}
           {formData.experience && (
-            <section className="mb-6">
+            <section className="mb-10">
               <h2 className="text-xl font-semibold border-b pb-1 border-gray-300">
                 Experience
               </h2>
@@ -58,7 +58,7 @@ const ResumePreview = () => {
 
           {/* Address at bottom */}
           {formData.address && (
-            <section className="mt-8 border-t border-gray-300 pt-4">
+            <section className="mt-16 border-t border-gray-300 pt-4">
               <h2 className="text-xl font-semibold mb-2">Address</h2>
               {formData.address.split(",").map((part, index) => (
                 <p key={index} className="text-gray-600">
@@ -74,4 +74,3 @@ const ResumePreview = () => {
 };
 
 export default ResumePreview;
-
