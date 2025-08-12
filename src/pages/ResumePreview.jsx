@@ -21,7 +21,7 @@ const ResumePreview = () => {
           {/* Header */}
           <div className="text-center border-b border-gray-300 pb-4 mb-6">
             <h1 className="text-3xl font-bold">{formData.name}</h1>
-            <p className="text-gray-600 mt-1">
+            <p className="text-gray-600 mt-1 break-words">
               {formData.contact} <span className="mx-2">•</span> {formData.email}
             </p>
           </div>
@@ -32,7 +32,7 @@ const ResumePreview = () => {
               <h2 className="text-xl font-semibold border-b pb-1 border-gray-300">
                 Objective
               </h2>
-              <p className="mt-2">{formData.objective}</p>
+              <p className="mt-2 break-words">{formData.objective}</p>
             </section>
           )}
 
@@ -42,7 +42,7 @@ const ResumePreview = () => {
               <h2 className="text-xl font-semibold border-b pb-1 border-gray-300">
                 Education
               </h2>
-              <p className="mt-2">{formData.education}</p>
+              <p className="mt-2 break-words">{formData.education}</p>
             </section>
           )}
 
@@ -52,7 +52,7 @@ const ResumePreview = () => {
               <h2 className="text-xl font-semibold border-b pb-1 border-gray-300">
                 Skills
               </h2>
-              <p className="mt-2">{formData.skills}</p>
+              <p className="mt-2 break-words">{formData.skills}</p>
             </section>
           )}
 
@@ -62,7 +62,7 @@ const ResumePreview = () => {
               <h2 className="text-xl font-semibold border-b pb-1 border-gray-300">
                 Experience
               </h2>
-              <p className="mt-2">{formData.experience}</p>
+              <p className="mt-2 break-words">{formData.experience}</p>
             </section>
           )}
 
@@ -72,18 +72,17 @@ const ResumePreview = () => {
               <h2 className="text-xl font-semibold border-b pb-1 border-gray-300">
                 Address
               </h2>
-              <p className="text-gray-600 mt-2">{formData.address}</p>
+              <p className="text-gray-600 mt-2 break-words">{formData.address}</p>
             </section>
           )}
 
-
           {/* Hobbies */}
           {formData.hobbies && (
-            <section className="mt-8 pt-4 border-gray-300 mb-4">
+            <section className="mt-8 pt-4 border-gray-300">
               <h2 className="text-xl font-semibold border-b pb-1 border-gray-300">
                 Hobbies
               </h2>
-              <p className="mt-2">{formData.hobbies}</p>
+              <p className="mt-2 break-words">{formData.hobbies}</p>
             </section>
           )}
 
